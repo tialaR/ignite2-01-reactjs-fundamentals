@@ -1,0 +1,35 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr; /*Sidebar com largura fixa de 256px e o resto do conteúdo ocupa todo o espaço*/
+    gap: 2rem; /*divisão entre a sidebar e os posts*/
+    align-items: flex-start; /*Alinhar os elementos sempre no topo*/
+}
+
+/*Quando a tela for menor que 768px => Tamanho legal para contemplar dispositivos mobile*/
+@media (max-width: 768px) {
+    /*Se dentro do ambiente que contempla dispositivos mobile eu reduzir o tamanho da fonte do HTML (por exemplo
+    de 16px p/ 12px) toda a aplicação vai diminuir junto (tudo onde tivermos usado o rem vai diminuir junto)
+    -> As coisas começam a caber mais em tela
+    -> O REM da pra gente esse poder de controlar essa flexibilização do tamanho de nossa interface areavés de 
+    nossos medias queries no CSS
+    -> Entretanto, para o font-size eu não posso estipular um valor em Pixel. eu deve sempre estipular um
+    valor percentual. Porque se utilizarmos em Pixel estaremos colocando um valor bruto e isso vai fazer com
+    que no dispositivo do usuário pare aquela questão dele poder aumentar e diminuir a fonte.
+    Para isso podemos fazer uma regra de 3 básica:
+    16px --> 100%
+    14px --> x
+    (14*100)/16 = 87,5%
+    */
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        /*Determinando que o grid não vai mais ter duas colunas e sim uma que ocupa a largura toda da tela*/
+       grid-template-columns: 1fr; 
+    }
+}

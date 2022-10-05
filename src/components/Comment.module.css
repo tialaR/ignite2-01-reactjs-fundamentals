@@ -1,0 +1,84 @@
+.comment {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.commentBox {
+    flex: 1;
+}
+
+.commetContent {
+    background-color: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.commetContent header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.authorAndTime strong {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.authorAndTime time {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--gray-400);
+}
+
+.commetContent header button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+
+    /*O botão no focus (também usando a tecla tab) sempre segue a altura de acordo com o line-height do botão. Uma forma de normalizar isso é colocando um line-height: 0 ou um font-size: 0*/
+    /*Para a borda do botão no focus (também usando a tecla tab) ficar arredondada devo inserir um border-radius nele*/
+    line-height: 0;
+    border-radius: 4px;
+}
+
+.commetContent header button:hover {
+    color: var(--red-500);
+}
+
+.commetContent p {
+    margin-top: 1rem;
+    color: var(--gray-300);
+}
+
+.commentBox footer {
+    margin-top: 1rem;
+}
+
+.commentBox footer button {
+    background-color: transparent;
+    border: 0;
+    color: var(--gray-400);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px;
+}
+
+.commentBox footer button:hover {
+    color: var(--green-300);
+}
+
+.commentBox footer button svg {
+    margin-right: 0.5rem;
+}
+
+.commentBox footer button span::before {
+    padding: 0 0.25rem;
+    content: "\2022"; /*Representa um ponto - Simbolo do HTML*/
+}

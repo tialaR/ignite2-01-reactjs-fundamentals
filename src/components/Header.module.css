@@ -1,0 +1,17 @@
+.header {
+    background: var(--gray-800);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoContainer img {
+    height: 2rem; 
+    margin-right: 0.6rem;
+}
